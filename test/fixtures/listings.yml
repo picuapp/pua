@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  photographer_area: MyString
+  photographer_language: MyString
+  camera_type: MyString
+  camera_years: 1
+  address: MyString
+  listing_title: MyString
+  listing_content: MyText
+  priceperperson: 1
+  active: false
+  user_id: 
+
+two:
+  photographer_area: MyString
+  photographer_language: MyString
+  camera_type: MyString
+  camera_years: 1
+  address: MyString
+  listing_title: MyString
+  listing_content: MyText
+  priceperperson: 1
+  active: false
+  user_id: 

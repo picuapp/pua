@@ -1,0 +1,64 @@
+<%= render 'partial/navbar' %>
+<div class="container">
+    <div class="col-md-3">
+        <!-- vertical-navbar -->
+        <%= render 'partial/verticalnavbar'%>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <div class="text-center">
+                  <span style="font-size:24px;">基本事項の編集</span>
+              </div>
+          </div>
+
+          <div class="panel-body">           
+              <%= form_for @listing do |f| %>
+                  <div class="row">
+                      <div class="col-md-12 select">
+                          <div class="form-group">
+                              <label>エリア</label>
+									<%= f.select :photographer_area, [["北海道","北海道"], ["東北","東北"], ["関東","関東"], ["中部","中部"], ["近畿","近畿"], ["中国","中国"], ["四国","四国"], ["九州","九州"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+
+                  <div class="row">
+                      <div class="col-md-12 select">
+                          <div class="form-group">
+                              <label>使用可能言語</label>
+									<%= f.select :photographer_language, [["日本語","日本語"], ["英語","英語"], ["中国語","中国語"] , ["韓国語","韓国語"], ["スペイン語","スペイン語"], ["ドイツ語","ドイツ語"], ["イタリア語","イタリア語"], ["ポルトガル語","ポルトガル語"], ["アラビア語","アラビア語"], ["ロシア語","ロシア語"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+
+                  <div class="row">
+                      <div class="col-md-12 select">
+                          <div class="form-group">
+                              <label>カメラ歴</label>
+									<%= f.select :camera_years, [["1年",1], ["2年",2], ["3年",3], ["4年",4], ["5年",5], ["6年以上",6]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+
+                  <div class="row">
+                      <div class="col-md-12 select">
+                          <div class="form-group">
+                              <label>カメラの種類</label>
+									<%= f.select :camera_type, [["一眼レフ","一眼レフ"], ["ミラーレス","ミラーレス"], ["コンデジ","コンデジ"], ["スマートフォン","スマートフォン"], ["チェキ","チェキ"], ["ドローン","ドローン"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+
+                  <div class="actions">
+                      <%= f.submit "更新", class: "btn btn-danger" %>
+                  </div>
+              <% end %>
+          </div>
+      </div>
+  </div>
+</div>
